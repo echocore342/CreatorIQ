@@ -49,10 +49,15 @@ Always structure prompts using this 4-part formula:
 - **Avatars, Badges & App Icons**: `1:1`
 - **Mobile Splash & Story Cards**: `9:16`
 
-### C. Execution Workflow
-1. Call `generate_image` with prompt and `AspectRatio`.
+### C. Hero Section Integration Patterns
+1. **Asymmetric 2-Column Split Hero (Preferred):** Left column contains headline and action buttons; right column holds a framed `3:2` or `16:9` Imagen photo with `rounded-2xl border border-slate-200 shadow-sm`.
+2. **Ambient Full-Bleed Hero with Gradient Mask:** Background container uses `16:9` image covered with `bg-gradient-to-r from-white via-white/85 to-transparent` (Light Mode) for pristine headline legibility and high visual richness.
+3. **Framed Viewport Hero:** Image rendered inside a mock tablet/monitor chassis with live floating status pills.
+
+### D. Execution Workflow
+1. Call `generate_image` with prompt and `AspectRatio` (`16:9` or `3:2` for Hero).
 2. Move or copy the resulting artifact into `public/assets/images/<slug>-<name>.webp` (or `.png`).
-3. Import or reference in React: `<img src="/assets/images/<slug>-<name>.webp" alt="Descriptive accessible text" className="w-full h-full object-cover rounded-xl" loading="lazy" />`.
+3. Import or reference in React: `<img src="/assets/images/<slug>-<name>.webp" alt="Descriptive accessible text" className="w-full h-full object-cover rounded-2xl" loading="eager" />` (use `eager` for hero above-the-fold).
 
 ---
 
