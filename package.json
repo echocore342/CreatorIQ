@@ -1,0 +1,26 @@
+{
+  "name": "creatoriq",
+  "version": "1.0.0",
+  "description": "CreatorIQ — AI-powered YouTube comment analytics and moderation platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anggajovansyah/Agents.md.git"
+  },
+  "keywords": ["youtube", "analytics", "ai", "gemini", "moderation"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "uuid": "^11.0.3"
+  }
+}
